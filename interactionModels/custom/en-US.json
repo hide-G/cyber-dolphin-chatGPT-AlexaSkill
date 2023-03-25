@@ -1,0 +1,44 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "cyber dolphin",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AskChatgptIntent",
+          "slots": [
+            {
+              "name": "question",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "what {question}",
+            "ask {question}"
+          ]
+        }
+      ],
+      "types": []
+    }
+  },
+  "version": "6"
+}

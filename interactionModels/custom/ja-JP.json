@@ -1,0 +1,87 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "サイバーイルカ",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AskChatgptIntent",
+          "slots": [
+            {
+              "name": "question",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{question}"
+              ]
+            }
+          ],
+          "samples": [
+            "{question} を教えて",
+            "{question} は何ですか",
+            "{question} とは何ですか",
+            "{question} について教えて",
+            "{question} を調べて"
+          ]
+        },
+        {
+          "name": "HelloWorldIntent",
+          "slots": [],
+          "samples": [
+            "おはようございます",
+            "こんにちは",
+            "はーい"
+          ]
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "AskChatgptIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "question",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.970891513553.193435702448"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.970891513553.193435702448",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Chat G P Tに質問したいことを話しかけてください。"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "4"
+}
